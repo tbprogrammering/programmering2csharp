@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+
+/tbOOPCarSolution/tbOOPCarSolution.sln
+/tbOOPCarSolution/tbOOPCarSolution/tbOOPCarSolution.csproj
+/tbOOPCarSolution/tbOOPCarSolution/Properties
+/tbOOPCarSolution/tbOOPCarSolution/obj/Debug
+/tbOOPCarSolution/tbOOPCarSolution/bin/Debug
+/tbOOPCarSolution/tbOOPCarSolution/App.config
+/tbOOPCarSolution/tbOOPCarSolution
+/tbOOPCarSolution/.vs/tbOOPCarSolution/v16/.suo
+/tbOOPCarSolution/.vs/tbOOPCarSolution/v16
+/tbOOPCarSolution

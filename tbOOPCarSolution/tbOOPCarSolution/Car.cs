@@ -16,6 +16,8 @@ namespace tbOOPCarSolution
         private float speed;
         public string colour;
 
+        Engine engine;
+
         public Car()
         {
             brand = "undefined";
@@ -25,10 +27,11 @@ namespace tbOOPCarSolution
             license_plate = "undefined";
             speed = 0f;
             colour = "undefined";
+            engine = new Engine();
         }
 
         public Car(string brand, string model, string colour,
-            int year, string fuel, string license_plate)
+            int year, string fuel, string license_plate, Engine engine)
         {
             this.brand = brand;
             this.model = model;
@@ -37,6 +40,21 @@ namespace tbOOPCarSolution
             this.fuel = fuel;
             this.license_plate = license_plate;
             this.speed = 0;
+            this.engine = engine;
+        }
+
+        public Car(string brand, string model, string colour,
+            int year, string fuel, string license_plate,
+            int hp, int num_cylinders, float cylinder_volume, string manufacturer)
+        {
+            this.brand = brand;
+            this.model = model;
+            this.colour = colour;
+            this.year = year;
+            this.fuel = fuel;
+            this.license_plate = license_plate;
+            this.speed = 0;
+            this.engine = new Engine(hp, num_cylinders, cylinder_volume, manufacturer);
         }
 
         public void Print()

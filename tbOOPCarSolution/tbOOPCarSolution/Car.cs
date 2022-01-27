@@ -46,7 +46,6 @@ namespace tbOOPCarSolution
 
         public void Horn()
         {
-            //HEJ
             Console.WriteLine($"{license_plate} Tut tut");
         }
 

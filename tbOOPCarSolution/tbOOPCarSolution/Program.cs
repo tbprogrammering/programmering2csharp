@@ -10,38 +10,42 @@ namespace tbOOPCarSolution
     {
         static void ShowMenu()
         {
+            Console.WriteLine($"\nMENYVAL:\n1. Lägg till bil\n");
+        }
 
+        static int GetUserInput()
+        {
+            int choice = 0;
+            //try / catch för att hantera om användaren matar in någoit som inte kan konverteras till en int
+            try { choice = int.Parse(Console.ReadLine()); }
+            catch { choice = -1; }
+
+            return choice;
         }
 
         static void Main(string[] args)
         {
-            List<Car> car_register = new List<Car>();
-            while(true)
+            CarHandler carRegister = new CarHandler();
+
+            while (true)
             {
                 ShowMenu();
+                int choice = GetUserInput();
+                
+                //Mata in val
+                switch(choice)
+                {
+                    case 1:
+                        Console.WriteLine("Skriv in bildata:");
+                        //Låt användaren mata un data och lagra i variabler som sedan skickas med i AddCar(...)
+                        //carRegister.AddCar(...);
+                        break;
+
+                    default:
+                        Console.WriteLine("Fel inmatning\n");
+                        break;
+                }
             }
-            
-
-
-            Car c1 = new Car();
-
-            Engine e2 = new Engine(200, 6, 2.0f, "Volvo");
-            Car c2 = new Car("Volvo", "V90", "Röd", 2020, "Diesel", "ABC123", e2);
-
-            //Console.WriteLine(c1.brand);
-            //Console.WriteLine(c2.brand);
-
-            c1.Print();
-            c2.Print();
-
-            c1.Horn();
-            c2.Horn();
-
-            c2.Accelerate();
-            c2.Accelerate();
-            
-
-            Console.WriteLine(c2.GetSpeed());
         }
     }
 }

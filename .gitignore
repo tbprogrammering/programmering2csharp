@@ -11,3 +11,12 @@
 /tbOOPCarSolution/tbOOPCarSolution/App.config
 /tbOOPCarSolution/.vs/tbOOPCarSolution/v16/.suo
 /tbOOPCarSolution/.vs/tbOOPCarSolution/v16
+/tbWPFPrototype/tbWPFPrototype.sln
+/tbWPFPrototype/.vs/tbWPFPrototype/v16
+/tbWPFPrototype/tbWPFPrototype/bin/Debug
+/tbWPFPrototype/tbWPFPrototype/obj/Debug
+/tbWPFPrototype/tbWPFPrototype/Properties
+*.csproj
+*.config
+/tbWPFPrototype/tbWPFPrototype/App.xaml
+/tbWPFPrototype/tbWPFPrototype/App.xaml.cs

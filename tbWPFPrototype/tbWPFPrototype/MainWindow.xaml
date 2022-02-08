@@ -1,0 +1,67 @@
+﻿<Window x:Class="tbWPFPrototype.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tbWPFPrototype"
+        Title="Bilregister" Height="715" Width="1080" ResizeMode="CanMinimize">
+    <Grid>
+        <Menu Grid.ColumnSpan="3" Margin="0,0,-0.4,-0.4" Grid.RowSpan="2">
+            <MenuItem Header="_File" >
+                <MenuItem Header="_Exit" Click="MenuItem_Click" />
+            </MenuItem>
+        </Menu>
+
+        <ListView Margin="10,127,9.6,9.6" Name="lvCars" KeyDown="OnKeyDownHandler">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Regnr" Width="150" DisplayMemberBinding="{Binding License_Plate}" />
+                    <GridViewColumn Header="Märke" Width="150" DisplayMemberBinding="{Binding Brand}" />
+                    <GridViewColumn Header="Modell" Width="150" DisplayMemberBinding="{Binding Model}" />
+                    <GridViewColumn Header="Årsmodell" Width="150" DisplayMemberBinding="{Binding Year}" />
+                    <GridViewColumn Header="Färg" Width="150" DisplayMemberBinding="{Binding Colour}" />
+                    <GridViewColumn Header="Drivmedel" Width="150" DisplayMemberBinding="{Binding Fuel}" />
+                    <GridViewColumn Header="Registreringsdatum" Width="150" DisplayMemberBinding="{Binding RegDate, StringFormat='yyyy-MM-dd'}" />
+                    <!-- HH:mm:ss:fff-->
+
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnAddNewCar" Content="Lägg till bil" Margin="970,58,9.6,596.6" Click="btnAddNewCar_Click"/>
+        <Button x:Name="btnRemoveCar" Content="Ta bort bil" Margin="970,10,14,645" Click="btnRemoveCar_Click"/>
+
+        <DatePicker Name="dpRegDate" Margin="915,94,9.6,563.6">
+            <DatePicker.Resources>
+                <Style TargetType="DatePickerTextBox">
+                    <Setter Property="IsReadOnly" Value="True"></Setter>
+                    <Setter Property="Text" Value="Välj datum"></Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+
+        <TextBox x:Name="txtLicensePlate" HorizontalAlignment="Left" Height="23" Margin="10,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Regnummer" HorizontalAlignment="Left" Height="31" Margin="10,62,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Bilmärke" HorizontalAlignment="Left" Height="31" Margin="165,63,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbBrands" HorizontalAlignment="Left" Margin="165,94,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtModel" Height="23" TextWrapping="Wrap" Width="120" Margin="314,94,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Modell" HorizontalAlignment="Left" Height="31" Margin="314,63,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Årsmodell" HorizontalAlignment="Left" Height="31" Margin="463,63,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Färg" HorizontalAlignment="Left" Height="31" Margin="615,62,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Drivmedel" HorizontalAlignment="Left" Height="31" Margin="763,61,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbFuel" HorizontalAlignment="Left" Margin="763,94,0,0" VerticalAlignment="Top" Width="120" Height="22">
+            <ComboBoxItem Content="Bensin" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Biogas" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Diesel" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="E85" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="El" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Hybrid" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Vätgas" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Annat" HorizontalAlignment="Left" Width="118.4"/>
+        </ComboBox>
+        <TextBox x:Name="txtColour" HorizontalAlignment="Left" Height="23" Margin="615,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbYear" HorizontalAlignment="Left" Margin="463,95,0,0" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+
+</Window>
+    

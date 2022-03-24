@@ -25,6 +25,12 @@ namespace tbOOPCarSolution
 
         static void Main(string[] args)
         {
+            Car c = new Car();
+
+            Engine e2 = new Engine(200, 6, 2.0f, "Volvo");
+            Car c2 = new Car("Volvo", "V90", "White", 2019, "Diesel", "ABC123", e2);
+
+
             CarHandler carRegister = new CarHandler();
 
             while (true)

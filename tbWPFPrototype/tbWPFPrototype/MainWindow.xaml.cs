@@ -68,7 +68,9 @@ namespace tbWPFPrototype
 
         private void btnRemoveCar_Click(object sender, RoutedEventArgs e)
         {
-            RemoveCar();
+            //RemoveCar();
+            Window2 subWindow = new Window2();
+            subWindow.Show();
         }
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
